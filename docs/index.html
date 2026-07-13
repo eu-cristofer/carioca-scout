@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CariocaScout — Promoções de feriado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Carioca<span>Scout</span></h1>
+    <p class="tagline">Quedas de 25%+ nas passagens saindo do Rio, feriado a feriado</p>
+    <p class="carimbo" id="generated-at" hidden></p>
+  </header>
+
+  <main id="deck" class="deck" aria-live="polite">
+    <!-- cards are rendered by app.js from deals.json -->
+  </main>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="rota">
+        <span class="aeroportos"></span>
+        <span class="queda-badge"></span>
+      </div>
+      <h2 class="destino"></h2>
+      <p class="feriado"></p>
+      <div class="precos">
+        <span class="preco-atual"></span>
+        <span class="preco-base"></span>
+      </div>
+      <svg class="sparkline" viewBox="0 0 100 28" preserveAspectRatio="none"
+           role="img" aria-label="Tendência de preço dos últimos dias">
+        <polyline fill="none"></polyline>
+      </svg>
+      <p class="data-viagem"></p>
+    </article>
+  </template>
+
+  <footer class="rodape">
+    <p>Dashboard read-only • dados de <code>deals.json</code> atualizados via cron</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

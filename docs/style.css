@@ -1,0 +1,118 @@
+/* CariocaScout — iPad-first, zero-build.
+   Palette: calçadão. Off-white pavement, deep Atlantic navy ink,
+   sea-green for money, hot coral only on the drop badge (the signature). */
+
+:root {
+  --pavimento: #f7f5f0;
+  --tinta: #10243a;
+  --tinta-suave: #5a6b7d;
+  --mar: #0e7c66;
+  --coral: #e8503a;
+  --linha: #e2ded4;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  background: var(--pavimento);
+  color: var(--tinta);
+  padding: clamp(16px, 4vw, 48px);
+  -webkit-text-size-adjust: 100%;
+}
+
+.topo h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.02em;
+}
+.topo h1 span { color: var(--mar); }
+.tagline { color: var(--tinta-suave); margin-top: 4px; }
+.carimbo { color: var(--tinta-suave); font-size: 0.8rem; margin-top: 8px; }
+
+/* Grid: 1 col (phone) / 2 (iPad portrait) / 3 (iPad landscape) */
+.deck {
+  margin-top: 28px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--linha);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 44px; /* touch-friendly */
+}
+
+.rota {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aeroportos {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--tinta-suave);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+/* The signature: the drop badge */
+.queda-badge {
+  background: var(--coral);
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.destino { font-size: 1.5rem; letter-spacing: -0.01em; }
+.feriado { color: var(--tinta-suave); font-size: 0.95rem; }
+
+.precos { display: flex; align-items: baseline; gap: 10px; }
+.preco-atual { color: var(--mar); font-size: 1.6rem; font-weight: 700; }
+.preco-base {
+  color: var(--tinta-suave);
+  text-decoration: line-through;
+  font-size: 0.95rem;
+}
+
+.sparkline { width: 100%; height: 44px; }
+.sparkline polyline {
+  stroke: var(--mar);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.data-viagem { font-size: 0.85rem; color: var(--tinta-suave); }
+
+.estado-vazio, .estado-erro {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--tinta-suave);
+  border: 1px dashed var(--linha);
+  border-radius: 14px;
+  font-size: 1.05rem;
+}
+
+.rodape {
+  margin-top: 40px;
+  color: var(--tinta-suave);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card { transition: transform 120ms ease; }
+  .card:active { transform: scale(0.99); } /* touch feedback, not hover */
+}

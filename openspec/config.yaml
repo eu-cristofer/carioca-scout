@@ -1,0 +1,15 @@
+# OpenSpec project configuration
+# Docs: https://github.com/Fission-AI/OpenSpec
+schema: spec-driven
+context: |
+  CariocaScout: monitor diário de quedas de preço de passagens aéreas
+  saindo do Rio (GIG/SDU) para POA, FLN, NYC e FLR, focado nos feriados
+  estaduais/municipais do RJ e suas emendas.
+  Stack: Python 3.11+ (stdlib only no core), pytest, HTML/CSS/JS puro
+  no dashboard (GitHub Pages), cron local.
+  Non-negotiables: TDD (red-green-refactor), core analítico puro,
+  I/O atrás de Protocols, deals.json é o contrato backend<->frontend.
+rules:
+  - Toda mudança de comportamento começa por /opsx:propose — nunca por código.
+  - Specs em specs/ são a fonte da verdade; changes/ é rascunho temporário.
+  - Cada requirement precisa de pelo menos um cenário "#### Scenario:".

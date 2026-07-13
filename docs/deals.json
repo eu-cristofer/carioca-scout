@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-07-12T09:00:00",
+  "deals": [
+    {
+      "origin": "GIG", "dest": "FLN", "travel_date": "2026-11-20",
+      "holiday": "Consciência Negra",
+      "price_brl": 289.9, "baseline_brl": 486.4, "drop_pct": 40.4,
+      "trend": [486.0, 492.0, 480.0, 495.0, 488.0, 479.0, 491.0,
+                485.0, 470.0, 460.0, 455.0, 430.0, 380.0, 289.9]
+    },
+    {
+      "origin": "SDU", "dest": "POA", "travel_date": "2027-01-20",
+      "holiday": "São Sebastião",
+      "price_brl": 312.5, "baseline_brl": 421.0, "drop_pct": 25.8,
+      "trend": [418.0, 425.0, 430.0, 419.0, 415.0, 422.0, 428.0,
+                417.0, 411.0, 405.0, 398.0, 380.0, 350.0, 312.5]
+    }
+  ]
+}

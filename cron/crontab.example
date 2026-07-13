@@ -1,0 +1,4 @@
+# CariocaScout — daily run at 06:15 local time.
+# Install with:  crontab -e   and paste the line below (fix the path).
+# Logs go to carioca_scout.log inside the repo.
+15 6 * * * cd /home/cristofer/carioca_scout && /usr/bin/python3 scripts/run_daily.py >> cron.log 2>&1
