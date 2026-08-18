@@ -5,6 +5,7 @@ data/
 carioca_scout.log
 cron.log
 .venv/
+*.egg-info/
 
 # --- graphify outputs: ignore everything, commit only stable artifacts ---
 graphify-out/**
