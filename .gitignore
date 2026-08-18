@@ -5,3 +5,60 @@ data/
 carioca_scout.log
 cron.log
 .venv/
+
+# --- graphify outputs: ignore everything, commit only stable artifacts ---
+graphify-out/**
+!graphify-out/
+!graphify-out/graph.json
+!graphify-out/GRAPH_REPORT.md
+!graphify-out/graph.html
+
+# --- secrets / sensitive files ---
+**/*.pem
+**/*.key
+**/secrets/**
+
+# --- dotenv: ignore all, but keep the example ---
+**/.env
+**/.env.*
+!**/.env.example
+
+# ===== macOS =====
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ===== Linux / Ubuntu =====
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===== Windows =====
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.stackdump
