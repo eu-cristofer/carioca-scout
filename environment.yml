@@ -1,0 +1,9 @@
+name: carioca-scout
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pytest>=8.0
+  - pip
+  - pip:
+      - -e .
